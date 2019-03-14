@@ -1,0 +1,11 @@
+.calendar-container{
+	padding:1em 1em 0em 1em;
+	width:100%;
+	text-align:center;
+}
+.calendar-zoom-out{
+	width:50% !important;
+}
+.calendar-container > img{
+	width:100%;
+}

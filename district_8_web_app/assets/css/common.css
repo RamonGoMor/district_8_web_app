@@ -1,0 +1,312 @@
+﻿*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin:0px;
+  padding:0px;
+}
+html{
+	box-sizing: border-box;
+	width:100%;
+	height:100%;
+}
+html, body {
+    width:100%;
+	min-height:100%;
+}
+body{
+	position: relative;
+	background-color:white;
+	background-image: url("../images/background.jpg");
+    background-attachment:fixed;
+	background-size:cover;
+	background-repeat:no-repeat;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+/***
+	Header is idpslay the upper portion of the webpage correctly
+***/
+.header {
+	border-bottom: 2px solid white;
+}
+.header > .title{
+	padding:1.5em;
+	text-align:center;
+}
+.header-navbar-icon{
+	display:none;
+}
+.header-navbar-icon > button{
+	font-size:1.5em;
+	width:100%;
+	text-align:left;
+	padding:.25em .5em .25em .5em;
+	border:0;
+	background-color:rgba(0,0,0,0);
+	color:white;
+	outline:none;
+	cursor:pointer;
+}
+.header-navbar-icon > button:hover{
+	background-color:rgba(255,255,255,.2);
+}
+.header-navbar{
+	text-align:center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+.header-navbar > div > *{
+	padding: .75rem;
+	cursor:default;
+}
+.header-navbar > div > a{
+	color:white;
+	text-decoration:none;
+}
+.header-navbar > div > a:hover{
+	background-color:#36363d;
+}
+.header-navbar > div > div:hover{
+	background-color:#36363d;
+}
+.header-links{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:flex-start;
+	width:75%;
+}
+.navbar-dropdown{
+	padding:0px !important;
+}
+.navbar-dropdown-title{
+	padding:.75em;
+}
+.navbar-dropdown > .navbar-dropdown-content{
+	padding-top:inherit;
+	position:absolute;
+	display:none;
+	flex-flow: column wrap;
+	border: 2px solid white;
+}
+.navbar-dropdown > .navbar-dropdown-content > a{
+	background-color:#16161d;
+	padding:1em;
+	color:white;
+	text-decoration:none;
+	cursor:default;
+}
+.navbar-dropdown > .navbar-dropdown-content > a:hover{
+	background-color:#36363d;
+}
+.navbar-dropdown-content-active{
+	display:flex !important;
+}
+.searchbar{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:flex-end;
+	width:25%;
+	padding-left:1em;
+	padding-right:1em;
+}
+.searchbar > input {
+	border: 2px solid #16161d;
+	width:75%;
+}
+.searchbar > button {
+	width:25%;
+	background-color:rgb(0,169,0);
+	text-transform:uppercase;
+	font-weight:600;
+	color:white;
+	border-color:rgb(0,109,0);
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	outline:none;
+}
+.searchbar > button:hover {
+	background-color:rgb(0,109,0);
+}
+.searchbar > button:focus {
+	border-color:rgb(0,79,0);
+}
+/***
+content padding-bottom makes it so the footer doest cover any portion of the content
+***/
+.content {
+	padding-bottom:4em;
+}
+/***
+	Footer is to display the footer correctly
+***/
+.footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-top:2px solid white;
+}
+.footer-navbar > div > *{
+	padding: 1rem;
+	cursor:default;
+}
+.footer-navbar > div > a{
+	color:white;
+	text-decoration:none;
+}
+.footer-navbar > div > a:hover{
+	background-color:#36363d;
+}
+.footer-social > a{
+	background-size:contain;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+.footer-social > a:nth-child(1){
+	background-image:url("../svg/nws.svg");
+}
+.footer-social > a:nth-child(2){
+	background-image:url("../svg/quickmaps.svg");
+}
+.footer-social > a:nth-child(3){
+	background-image:url("../svg/twitter.svg");
+}
+.footer-social > a:nth-child(4){
+	background-image:url("../svg/waze.svg");
+}
+.footer-navbar{
+	text-align:center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.footer-links{
+	width:50%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.footer-time{
+	width:25%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+.footer-social{
+	width:25%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+.footer-social > a{
+	margin-left:.5em;
+	margin-right:.5em;
+}
+/***
+	@media makes sure what happens when screen size changes
+***/
+@media only screen and (max-width: 600px) {
+	.footer-links,
+	.footer-time,
+	.footer-social{
+		width:100%;
+		justify-content: space-evenly;
+	}
+	.header-navbar{
+		display:none;
+	}
+	.header-links{
+		flex-flow:column wrap;
+		width:100%;
+		justify-content: space-evenly;
+	}
+	.searchbar{
+		width:100%;
+		justify-content: space-evenly;
+	}
+	.header-navbar-icon {
+		display:flex;
+	}
+	.content{
+		padding-bottom:9em;
+	}
+	.navbar-dropdown > .navbar-dropdown-content{
+		position:relative;
+		display:none;
+		flex-flow: column wrap;
+	}
+}
+/***
+	Following are used as Constants. Meant to be used to alter a element
+***/
+.display-dark{
+	background-color:#16161d;
+	color:#ffffff;
+}
+.visible{
+	display:flex !important;
+}
+.text-center{
+	text-align:center;
+}
+/***
+	Modal class is used to create a modal, initially hidden
+***/
+.modal{
+	position:absolute;
+	z-index:1;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,.5);
+	top:0;
+	display:none;
+}
+.modal-header{
+	color:white;
+	text-align:right;
+	padding:.5em;
+}
+.modal-close {
+	cursor:pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+}
+.modal-close:hover {
+	color:rgb(211,211,211);
+}
+.modal-container{
+	margin: auto;
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 100%;
+	max-height: 100%;
+	background-color: #16161d;
+	border: 2px solid white;
+	border-radius: 3px;
+	flex-flow: column wrap;
+}
+.modal-content{
+	display:flex;
+	flex-flow: column wrap;
+}
+
+/***
+	Animations
+***/
+@keyframes rotate{
+    0% {
+       transform: rotateY(0deg);
+    }
+
+   50% {
+        transform: rotateY(160deg);
+    }
+    100% {
+        transform: rotateY(320deg);
+    }
+}
