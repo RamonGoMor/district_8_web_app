@@ -69,9 +69,7 @@
 			<div class="modal-container">
 				<div class="modal-header"><a class="modal-close">&#10060;</a></div>
 				<div class="modal-content">
-					<input id="username" type="text" />
-					<input id="username" type="password" />
-					<button id="test">HEELO</button>
+					
 				</div>
 			</div>
 		</div>

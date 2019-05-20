@@ -20,7 +20,12 @@
 		</div>
 		<?php add_footer(); ?>
 		<div class="modal">
-		
+			<div class="modal-container">
+				<div class="modal-header"><a class="modal-close">&#10060;</a></div>
+				<div class="modal-content">
+					
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

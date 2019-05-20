@@ -293,8 +293,46 @@ content padding-bottom makes it so the footer doest cover any portion of the con
 .modal-content{
 	display:flex;
 	flex-flow: column wrap;
+	padding:1em;
 }
+.login-form{
+	display:flex;
+	flex-flow: column wrap;
 
+}
+.login-form > p{
+	color:white;
+	font-size:1.25em;
+}
+.login-form > input{
+	padding:5px;
+}
+.login-form > button{
+	padding:.75em;
+	background-color:rgba(0,0,0,0);
+	text-transform:uppercase;
+	font-weight:600;
+	color:rgb(0,169,0);
+	border-color:rgb(0,169,0);
+	outline:none;
+}
+.login-form > button:hover{
+	background-color:rgb(0,169,0);
+	color:white;
+	border-color:rgb(0,109,0);
+}
+.error-dialog{
+	color:rgb(169,0,0);
+}
+.remember-me-form{
+	text-align:center;
+}
+.remember-me-form > input{
+	color:white;
+}
+.remember-me-form > label{
+	color:white;
+}
 /***
 	Animations
 ***/
@@ -309,4 +347,7 @@ content padding-bottom makes it so the footer doest cover any portion of the con
     100% {
         transform: rotateY(320deg);
     }
+}
+.overflow-hidden{
+	overflow:hidden;
 }

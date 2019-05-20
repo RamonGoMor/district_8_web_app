@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	function add_head($title){
 		include "../../assets/components/head.php";
 	}

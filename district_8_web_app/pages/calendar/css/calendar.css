@@ -3,9 +3,6 @@
 	width:100%;
 	text-align:center;
 }
-.calendar-zoom-out{
-	width:50% !important;
-}
 .calendar-container > img{
-	width:100%;
+	height:100vh;
 }

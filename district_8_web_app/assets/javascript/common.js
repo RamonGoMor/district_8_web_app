@@ -26,12 +26,11 @@ $(document).ready(function(){
 		$(".modal").toggleClass("visible");
 	});
 	$("#login").click(function(){
+		$.get("../../assets/php/modal_controller.php?id=login", function(data, status){
+			$(".modal-content").html(data);
+		});
 		$(".modal").toggleClass("visible");
 	});
-	$("#test").click(function(){
-		$(".modal-content").html(" ");
-	});
-	
 });
 
 function startTime() {
